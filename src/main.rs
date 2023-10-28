@@ -1,4 +1,5 @@
-use rusqlite::{Connection, Result};
+#![allow(clippy::non_snake_case)]
+// use rusqlite::{Connection, Result};
 
 mod db_operations {
     use rusqlite::{Connection, Result};
@@ -135,7 +136,7 @@ fn main() {
                 let mut new_description = String::new();
                 std::io::stdin().read_line(&mut new_description).unwrap();
 
-                if let Err(e) = db_operations::update(&conn, id, &new_title.trim(), &new_description.trim()) {
+                if let Err(e) = db_operations::update(&conn, id, new_title.trim(), &new_description.trim()) {
                     println!("Error updating task: {}", e);
                 }
             },
