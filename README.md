@@ -1,3 +1,4 @@
+[![Rust](https://github.com/nogibjj/ZT-DE-IndividualAssnmt2/actions/workflows/rust.yml/badge.svg)](https://github.com/nogibjj/ZT-DE-IndividualAssnmt2/actions/workflows/rust.yml)
 # ZT-DE-IndividualAssnmt2
 
 ## Project Description
