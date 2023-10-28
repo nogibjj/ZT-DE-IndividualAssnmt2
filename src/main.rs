@@ -1,4 +1,5 @@
-#![allow(clippy::non_snake_case)]
+#![allow(non_snake_case)]
+
 // use rusqlite::{Connection, Result};
 
 mod db_operations {
@@ -17,7 +18,7 @@ mod db_operations {
     pub fn create(conn: &Connection, title: &str, description: &str) -> Result<(), rusqlite::Error> {
         conn.execute(
             "INSERT INTO tasks (title, description) VALUES (?1, ?2)",
-            &[title, description],
+            [title, description],
         )?;
         Ok(())
     }
@@ -39,13 +40,13 @@ mod db_operations {
     pub fn update(conn: &Connection, id: i32, new_title: &str, new_description: &str) -> Result<(), rusqlite::Error> {
         conn.execute(
             "UPDATE tasks SET title = ?1, description = ?2 WHERE id = ?3",
-            &[new_title, new_description, &id.to_string()],
+            [new_title, new_description, &id.to_string()],
         )?;
         Ok(())
     }
 
     pub fn delete(conn: &Connection, id: i32) -> Result<(), rusqlite::Error> {
-        conn.execute("DELETE FROM tasks WHERE id = ?1", &[&id.to_string()])?;
+        conn.execute("DELETE FROM tasks WHERE id = ?1", [&id.to_string()])?;
         Ok(())
     }
 }
@@ -111,7 +112,7 @@ fn main() {
                 let mut description = String::new();
                 std::io::stdin().read_line(&mut description).unwrap();
 
-                if let Err(e) = db_operations::create(&conn, &title.trim(), &description.trim()) {
+                if let Err(e) = db_operations::create(&conn, title.trim(), description.trim()) {
                     println!("Error creating task: {}", e);
                 }
             },
@@ -136,7 +137,7 @@ fn main() {
                 let mut new_description = String::new();
                 std::io::stdin().read_line(&mut new_description).unwrap();
 
-                if let Err(e) = db_operations::update(&conn, id, new_title.trim(), &new_description.trim()) {
+                if let Err(e) = db_operations::update(&conn, id, new_title.trim(), new_description.trim()) {
                     println!("Error updating task: {}", e);
                 }
             },
