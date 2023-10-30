@@ -51,8 +51,17 @@ mod db_operations {
     }
 }
 
+// filter a vector in Rust
+
+// fn filter_vector() {
+//    let numbers = vec![1, 2, 3, 4, 5, 6, 7, 8, 9];
+//    let even_numbers: Vec<i32> = numbers.into_iter().filter(|x| x % 2 == 0).collect();
+//    println!("{:?}", even_numbers);
+//}
 
 fn main() {
+    //filter_vector();
+    
     // variable bindings with 'let'
     let greeting = "Hello, user!";
     println!("{}", greeting);
