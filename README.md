@@ -10,7 +10,7 @@ A simple command-line interface application built with Rust, integrating SQLite 
 
 ## Usage
 To run the program, use the following command:
-<cargo run>
+/cargo run/
 
 ## Dependencies
 - Rust Programming Language: Installation Guide <https://www.rust-lang.org/tools/install>
