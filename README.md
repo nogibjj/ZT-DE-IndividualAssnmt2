@@ -20,4 +20,4 @@ To run the program, use the following command:
 During the development process, I utilized GitHub Copilot, an AI programming assistant. Copilot provided suggestions, helped write functions such as 'filter_vector()', and ensured efficient coding practices. The introduction of Copilot to this project greatly enhanced the development speed and provided valuable insights.
 
 ## Video Demonstration
-For a concise walkthrough and demonstration of the CLI binary functionality, watch the video demo here <>.
+For a concise walkthrough and demonstration of the CLI binary functionality, watch the video demo here <https://vimeo.com/883384969/8bb12f0b5a?share=copy>.
